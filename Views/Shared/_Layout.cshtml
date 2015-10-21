@@ -1,0 +1,36 @@
+﻿@model SignalRChat.Models.BasicCookie
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - HSW Chat</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/js")
+    @RenderSection("scripts", required: false)
+    <link rel="stylesheet" type="text/css" href="../../Content/style2.css" />
+    <link rel="stylesheet" href="../../Content/styles.css">
+</head>
+<body>
+@Model.GetUser().Nickname
+<div class="container">
+    <nav id="bt-menu" class="bt-menu">
+        <a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+        <ul>
+            <li><a href='@string.Format("/User/Index?userId={0}", @Model.GetUser().Id)' class="icon icon-organization"></a><br><font color="white">Выбор собеседника</font></li>
+            <li><a href='@string.Format("/Chat/Index?userId={0}", @Model.GetUser().Id)' class="icon icon-chat-bubble-two"></a><br><font color="white">Выбор чата</font></li>
+            <li><a href='@string.Format("/User/Edit?userId={0}", @Model.GetUser().Id)' class="icon icon-settings"></a><br><font color="white">Настройки</font></li>
+        </ul>
+    </nav>
+</div>
+
+<script src="/Scripts/classie.js"></script>
+<script src="/Scripts/borderMenu.js"></script>
+<div class="container body-content">
+    @RenderBody()
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿@model SignalRChat.Models.BasicCookie
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HSW site</title>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <th>
+                Имя чата
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model.GetChatList()) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Тут будет красивая кнопка на открытие чата", "Message", new { chatId = item.Id, userId = Model.GetUser().Id }) |
+                @Html.ActionLink("Тут будет красивая кнопка на удаление чата", "Delete", new { chatId = item.Id, userId = Model.GetUser().Id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

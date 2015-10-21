@@ -1,0 +1,68 @@
+﻿@model SignalRChat.Models.BasicCookie
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HSW site</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-horizontal">
+            <hr />
+            @Html.ValidationSummary(true)
+            @Html.HiddenFor(model => model.GetUser().Id)
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.GetUser().Nickname, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.GetUser().Nickname)
+                    @Html.ValidationMessageFor(model => model.GetUser().Nickname)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.GetUser().Age, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.GetUser().Age)
+                    @Html.ValidationMessageFor(model => model.GetUser().Age)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.GetUser().Sex, new {@class = "control-label col-md-2"})
+                <label class="radio-inline"><input type="radio" id="Sex" name="Sex" value="0">Male</label>
+                <label class="radio-inline"><input type="radio" id="Sex" name="Sex" value="1">Female</label>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.GetUser().Password, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.GetUser().Password)
+                    @Html.ValidationMessageFor(model => model.GetUser().Password)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.GetUser().LastVisit, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Model.GetUser().LastVisit
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+</body>
+</html>

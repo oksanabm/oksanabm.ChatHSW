@@ -1,0 +1,66 @@
+﻿@model SignalRChat.Models.User
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HSW site</title>
+</head>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Register form</h4>
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            Please enter your nickname
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nickname)
+                @Html.ValidationMessageFor(model => model.Nickname)
+            </div>
+        </div>
+
+        <div class="form-group">
+            Please enter your age
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Age)
+                @Html.ValidationMessageFor(model => model.Age)
+            </div>
+        </div>
+
+        <div class="form-group">
+            Please enter your sex
+            @Html.LabelFor(model => model.Sex, new {@class = "control-label col-md-2"})
+            <label class="radio-inline"><input type="radio" id="Sex" name="Sex" value="0">Male</label>
+            <label class="radio-inline"><input type="radio" id="Sex" name="Sex" value="1">Female</label>
+        </div>
+
+        <div class="form-group">
+            Please enter password
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Password)
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
+        </div>
+
+        <br>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default"/>
+            </div>
+        </div>
+    </div>
+    
+    <div>
+        @Html.ActionLink("Back to Login", "Index")
+    </div>
+}
+
+

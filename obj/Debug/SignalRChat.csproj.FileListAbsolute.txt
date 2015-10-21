@@ -1,0 +1,131 @@
+C:\Projects\SignalRChat\SignalRChat\bin\SignalRChat.dll.config
+C:\Projects\SignalRChat\SignalRChat\bin\SignalRChat.dll
+C:\Projects\SignalRChat\SignalRChat\bin\SignalRChat.pdb
+C:\Projects\SignalRChat\SignalRChat\bin\Antlr3.Runtime.dll
+C:\Projects\SignalRChat\SignalRChat\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Projects\SignalRChat\SignalRChat\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Projects\SignalRChat\SignalRChat\bin\Microsoft.Owin.dll
+C:\Projects\SignalRChat\SignalRChat\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Projects\SignalRChat\SignalRChat\bin\Microsoft.Owin.Security.dll
+C:\Projects\SignalRChat\SignalRChat\bin\Microsoft.Web.Infrastructure.dll
+C:\Projects\SignalRChat\SignalRChat\bin\Newtonsoft.Json.dll
+C:\Projects\SignalRChat\SignalRChat\bin\Owin.dll
+C:\Projects\SignalRChat\SignalRChat\bin\System.Web.Helpers.dll
+C:\Projects\SignalRChat\SignalRChat\bin\System.Web.Mvc.dll
+C:\Projects\SignalRChat\SignalRChat\bin\System.Web.Optimization.dll
+C:\Projects\SignalRChat\SignalRChat\bin\System.Web.Razor.dll
+C:\Projects\SignalRChat\SignalRChat\bin\System.Web.WebPages.Deployment.dll
+C:\Projects\SignalRChat\SignalRChat\bin\System.Web.WebPages.dll
+C:\Projects\SignalRChat\SignalRChat\bin\System.Web.WebPages.Razor.dll
+C:\Projects\SignalRChat\SignalRChat\bin\WebGrease.dll
+C:\Projects\SignalRChat\SignalRChat\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Projects\SignalRChat\SignalRChat\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Projects\SignalRChat\SignalRChat\bin\Microsoft.Owin.xml
+C:\Projects\SignalRChat\SignalRChat\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Projects\SignalRChat\SignalRChat\bin\Microsoft.Owin.Security.xml
+C:\Projects\SignalRChat\SignalRChat\bin\System.Web.Helpers.xml
+C:\Projects\SignalRChat\SignalRChat\bin\System.Web.Mvc.xml
+C:\Projects\SignalRChat\SignalRChat\bin\System.Web.Optimization.xml
+C:\Projects\SignalRChat\SignalRChat\bin\System.Web.Razor.xml
+C:\Projects\SignalRChat\SignalRChat\bin\System.Web.WebPages.xml
+C:\Projects\SignalRChat\SignalRChat\bin\System.Web.WebPages.Deployment.xml
+C:\Projects\SignalRChat\SignalRChat\bin\System.Web.WebPages.Razor.xml
+C:\Projects\SignalRChat\SignalRChat\bin\Newtonsoft.Json.xml
+C:\Projects\SignalRChat\SignalRChat\bin\Antlr3.Runtime.pdb
+C:\Projects\SignalRChat\SignalRChat\obj\Debug\SignalRChat.csprojResolveAssemblyReference.cache
+C:\Projects\SignalRChat\SignalRChat\obj\Debug\SignalRChat.dll
+C:\Projects\SignalRChat\SignalRChat\obj\Debug\SignalRChat.pdb
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\SignalRChat.dll.config
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\SignalRChat.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\SignalRChat.pdb
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Antlr3.Runtime.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.Owin.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.Owin.Security.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.Web.Infrastructure.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Newtonsoft.Json.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Owin.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.Helpers.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.Mvc.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.Optimization.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.Razor.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.WebPages.Deployment.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.WebPages.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.WebPages.Razor.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\WebGrease.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.Owin.xml
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.Owin.Security.xml
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.Helpers.xml
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.Mvc.xml
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.Optimization.xml
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.Razor.xml
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.WebPages.xml
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.WebPages.Deployment.xml
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.WebPages.Razor.xml
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Newtonsoft.Json.xml
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Antlr3.Runtime.pdb
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\obj\Debug\SignalRChat.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\obj\Debug\SignalRChat.pdb
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\EntityFramework.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\EntityFramework.SqlServer.dll
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\EntityFramework.xml
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\EntityFramework.SqlServer.xml
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\obj\Debug\SignalRChat.Migrations.InitialCreate.resources
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\obj\Debug\SignalRChat.csproj.GenerateResource.Cache
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\obj\Debug\SignalRChat.csprojResolveAssemblyReference.cache
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\obj\Debug\SignalRChat.Migrations.UserTableUpdate.resources
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\obj\Debug\SignalRChat.Migrations.AddUserColumnToChatTable.resources
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\obj\Debug\SignalRChat.Migrations.AddSexToTheUserTable.resources
+E:\учеба\Магистратура\семестр 3\WEB\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\obj\Debug\SignalRChat.Migrations.AddIndexToChatNameAndNickname.resources
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\SignalRChat.dll.config
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\SignalRChat.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\SignalRChat.pdb
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Antlr3.Runtime.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\EntityFramework.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\EntityFramework.SqlServer.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.AspNet.SignalR.Core.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.Owin.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.Owin.Host.SystemWeb.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.Owin.Security.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.Web.Infrastructure.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Newtonsoft.Json.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Owin.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.Helpers.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.Mvc.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.Optimization.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.Razor.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.WebPages.Deployment.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.WebPages.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.WebPages.Razor.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\WebGrease.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\EntityFramework.xml
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\EntityFramework.SqlServer.xml
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.AspNet.SignalR.Core.xml
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.Owin.xml
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.Owin.Host.SystemWeb.xml
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Microsoft.Owin.Security.xml
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.Helpers.xml
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.Mvc.xml
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.Optimization.xml
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.Razor.xml
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.WebPages.xml
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.WebPages.Deployment.xml
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\System.Web.WebPages.Razor.xml
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Newtonsoft.Json.xml
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\bin\Antlr3.Runtime.pdb
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\obj\Debug\SignalRChat.csprojResolveAssemblyReference.cache
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\obj\Debug\SignalRChat.Migrations.InitialCreate.resources
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\obj\Debug\SignalRChat.Migrations.UserTableUpdate.resources
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\obj\Debug\SignalRChat.Migrations.AddUserColumnToChatTable.resources
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\obj\Debug\SignalRChat.Migrations.AddSexToTheUserTable.resources
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\obj\Debug\SignalRChat.Migrations.AddIndexToChatNameAndNickname.resources
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\obj\Debug\SignalRChat.csproj.GenerateResource.Cache
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\obj\Debug\SignalRChat.dll
+H:\Magistery\web\Getting Started with SignalR 2.0 and MVC 5\C#\SignalRChat\obj\Debug\SignalRChat.pdb
