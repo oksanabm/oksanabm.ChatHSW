@@ -1,6 +1,6 @@
-﻿using System.Data.Entity;
+using System.Data.Entity;
 using SignalRChat.Models;
-
+  
 namespace SignalRChat.DAL
 {
 
