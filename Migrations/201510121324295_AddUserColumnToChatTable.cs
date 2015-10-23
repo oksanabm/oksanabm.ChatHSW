@@ -9,7 +9,7 @@ namespace SignalRChat.Migrations
         {
             AddColumn("dbo.Users", "Chat_Id", c => c.Int());
             CreateIndex("dbo.Users", "Chat_Id");
-            AddForeignKey("dbo.Users", "Chat_Id", "dbo.Chats", "Id", cascadeDelete: true);
+            AddForeignKey("dbo.Users", "Chat_Id", "dbo.Chats", "Id");
         }
         
         public override void Down()
