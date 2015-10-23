@@ -26,8 +26,8 @@ namespace SignalRChat.Migrations
                         Chat_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Users", t => t.Author_Id, cascadeDelete: true)
-                .ForeignKey("dbo.Chats", t => t.Chat_Id, cascadeDelete: true)
+                .ForeignKey("dbo.Users", t => t.Author_Id)
+                .ForeignKey("dbo.Chats", t => t.Chat_Id)
                 .Index(t => t.Author_Id)
                 .Index(t => t.Chat_Id);
             

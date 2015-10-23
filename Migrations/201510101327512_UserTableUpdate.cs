@@ -10,7 +10,7 @@ namespace SignalRChat.Migrations
             AddColumn("dbo.Users", "Password", c => c.String());
             AddColumn("dbo.Users", "User_Id", c => c.Int());
             CreateIndex("dbo.Users", "User_Id");
-            AddForeignKey("dbo.Users", "User_Id", "dbo.Users", "Id", cascadeDelete: true);
+            AddForeignKey("dbo.Users", "User_Id", "dbo.Users", "Id");
         }
         
         public override void Down()

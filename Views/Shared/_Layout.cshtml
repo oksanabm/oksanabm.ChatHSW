@@ -15,8 +15,10 @@
     <link rel="stylesheet" href="../../Content/styles.css">
 </head>
 <body>
-@Model.GetUser().Nickname
+    <p align="right">Hello, <a href='@string.Format("/User/Edit?userId={0}", @Model.GetUser().Id)'>@Model.GetUser().Nickname</a></p>
+
 <div class="container">
+
     <nav id="bt-menu" class="bt-menu">
         <a href="#" class="bt-menu-trigger"><span>Menu</span></a>
         <ul>
@@ -25,12 +27,13 @@
             <li><a href='@string.Format("/User/Edit?userId={0}", @Model.GetUser().Id)' class="icon icon-settings"></a><br><font color="white">Настройки</font></li>
         </ul>
     </nav>
+    @RenderBody()
 </div>
 
 <script src="/Scripts/classie.js"></script>
 <script src="/Scripts/borderMenu.js"></script>
 <div class="container body-content">
-    @RenderBody()
+
 </div>
 </body>
 </html>

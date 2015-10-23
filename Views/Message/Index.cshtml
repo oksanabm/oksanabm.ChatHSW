@@ -23,8 +23,8 @@
                 var initPage = 1;
 
                 chat.client.addNewMessageToPage = function (name, message) {
-                    $('#discussion').append('<li><strong>' + htmlEncode(name)
-                        + '</strong>: ' + htmlEncode(message) + '</li>');
+                    $('#discussion').append('<li>' + htmlEncode(name)
+                        + ': ' + htmlEncode(message) + '</li>');
                 };
 
 
@@ -50,15 +50,16 @@
     }
 </head>
 <body>
+<div align="center">
+    <div class="box">
+        <h2>@Model.GetMessageList().FirstOrDefault().Chat.Name</h2>
 
-    <h2>@Model.GetMessageList().FirstOrDefault().Chat.Name</h2>
+            <ul id="discussion" class ="wrap"></ul>
+            <textarea cols="50" rows="5" wrap="virtual" id="message"></textarea>
+            <input type="button" id="sendmessage" value="Отправить" />
+            <input type="text" id="displayname" hidden="true"/>
 
-<div class="container">
-    <ul id="discussion"></ul>
-    <input type="text" id="message"/>
-    <input type="button" id="sendmessage" value="Отправить"/>
-    <i>Временное место для ника</i><input type="text" id="displayname" />
-
+    </div>
 </div>
 </body>
 </html>
