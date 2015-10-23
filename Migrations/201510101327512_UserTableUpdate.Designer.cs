@@ -12,7 +12,7 @@ namespace SignalRChat.Migrations
         private readonly ResourceManager Resources = new ResourceManager(typeof(UserTableUpdate));
         
         string IMigrationMetadata.Id
-        {dd
+        {
             get { return "201510101327512_UserTableUpdate"; }
         }
         
