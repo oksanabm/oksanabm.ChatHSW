@@ -19,12 +19,9 @@ body  {
 	height: 100%;
 }
 
-.container {
-	padding: 80px;
-	}
-
 /*базовая серая полоса менюшки*/
 .bt-menu {
+    font-size: 14px;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -41,7 +38,7 @@ body  {
 
 .bt-menu.bt-menu-open {
 	height: 100%;
-	border-width: 30px 30px 30px 160px;
+	border-width: 30px 30px 30px 130px;  /* ширина фона меню*/
 	background-color: rgba(0,0,0,0.3);
 	-webkit-transition: border-width 0.3s, background-color 0.3s;
 	transition: border-width 0.3s, background-color 0.3s;
@@ -58,11 +55,11 @@ body  {
 
 .bt-menu-trigger {
 	position: fixed;
-	top: 15px;
-	left: 20px;
+	top: 65px;
+	left: 30px;
 	display: block;
-	width: 50px;
-	height: 50px;
+	width: 60px;
+	height: 60px;
 	cursor: pointer;
 }
 
@@ -95,18 +92,19 @@ body  {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #fff;
 	content: '';
 	-webkit-transition: -webkit-transform 0.3s;
 	transition: transform 0.3s;
 }
 
 .bt-menu-trigger span:before {
+    background-color: #FE973D;
 	-webkit-transform: translateY(-250%);
 	transform: translateY(-250%);
 }
 
 .bt-menu-trigger span:after {
+    background-color: #FE973D;
 	-webkit-transform: translateY(250%);
 	transform: translateY(250%);
 }
@@ -123,11 +121,13 @@ body  {
 
 .bt-menu ul {
 	position: fixed;
-	top: 75px;
-	left: 0;
+	top: 155px; /* отступ сверху*/
+	left: 10px;
 	margin: 0;
 	padding: 0;
-	width: 90px;
+    vertical-align: central;
+    align-content: center;
+    width: 100px; /* ширина списка с иконками*/
 	list-style: none;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
@@ -138,10 +138,11 @@ body  {
 	display: block;
 	width: 100%;
 	text-align: center;
+    vertical-align: central;
 }
 
 .bt-menu ul li {
-	padding: 46px 0; /*позиция иконок по вертикали*/
+	padding: 20px 0; /*позиция иконок по вертикали*/
 	opacity: 0;
 	visibility: hidden;
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
@@ -193,18 +194,19 @@ body  {
 /* иконки*/
 .bt-menu ul li a:before {
 	color: white;
-	font-size: 68px;
+	font-size: 64px;
 	-webkit-transition: color 0.2s;
 	transition: color 0.2s;
 }
 
 .bt-menu ul li a:hover:before,
 .bt-menu ul li a:focus:before  {
+    font-size: 66px;
 	color: #FE973D;
 }
 
 @media screen and (max-height: 31.125em) {
 	.bt-menu ul li a:before {
-		font-size: 32px;
+		font-size: 40px;
 	}
 }

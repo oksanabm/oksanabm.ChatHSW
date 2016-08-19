@@ -12,41 +12,50 @@
     <title>HSW site</title>
 </head>
 <body>
+    <div class=" father_box" align="right">
+        <div class="box">
+            <div class="hat_box">
+                Поиск собеседников
+            </div>
+            <div class="wrap">
+                <table class="table">
+                    <tr width="100%">
+                        <th width="30%">
+                            Ник пользователя
+                        </th>
+                        <th width="15%">
+                            Возраст
+                        </th>
+                        <th width="30%">
+                            Последний визит
+                    </th>
+                    <th width="25%"> Добавить | Перейти </th>
+                    </tr>
 
-<h4>Найди себе друга ^^</h4>
-<table class="table">
-    <tr>
-        <th>
-            Nickname
-        </th>
-        <th>
-            Возраст
-        </th>
-        <th>
-            Последний визит
-        </th>
-        <th></th>
-    </tr>
+                    @foreach (var item in Model.GetUserList())
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nickname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Age)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LastVisit)
+                            </td>
+                            <td>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="/User/AddToFriends/@item.Id?userId=@Model.GetUser().Id" class="fa fa-user-plus fa-2x"></a>&nbsp;&nbsp;|
+                                &nbsp;
+                                <a href="/User/RedirectToCreateChat/@item.Id?userId=@Model.GetUser().Id" class="fa fa-weixin fa-2x"></a>
+                            </td>
+                        </tr>
+                    }
 
-    @foreach (var item in Model.GetUserList())
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nickname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Age)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastVisit)
-            </td>
-            <td>
-                @Html.ActionLink("Добавить в друзья", "AddToFriends", new {id = item.Id, userId = Model.GetUser().Id}) |
-                @Html.ActionLink("Чат", "RedirectToCreateChat", new { id = item.Id, userId = Model.GetUser().Id})
-            </td>
-        </tr>
-    }
-
-</table>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

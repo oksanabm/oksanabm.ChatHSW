@@ -1,4 +1,4 @@
-﻿@model SignalRChat.Models.User
+﻿@model SignalRChat.Models.BasicCookie
 
 @{
     Layout = null;
@@ -8,40 +8,45 @@
 
 <html>
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width"/>
     <title>HSW site</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Content/style_login.css" media="screen" type="text/css" />
 </head>
 <body>
-@using (Html.BeginForm())
-{
-<div id ="LoginForm">
-    @Html.AntiForgeryToken()
+    
+    <div id="LoginForm">
 
-    <div class="form-horizontal">
-        <h4>Login form</h4>
-        @Html.ValidationSummary(true)
-
-        <div class="form-group">
-            <div class="col-md-10">
-                Nickname:
-                @Html.EditorFor(model => model.Nickname)
-                @Html.ValidationMessageFor(model => model.Nickname)<br><br>
-                Password:
-                @Html.EditorFor(model => model.Password)
-                @Html.ValidationMessageFor(model => model.Password)
-            </div>
-        </div>
-        <br>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Login" class="btn btn-default"/>
-            </div>
+        <p> <img src="../images/logo_1.png" alt="CHAT FROM the Hard Siberian Women" hspace="3" align="middle"></p>
+        <form action="/" method="post">
+            @Html.AntiForgeryToken()
+            <fieldset class="form-group">
+                <p>
+                    <span class="fontawesome-user"><i class="fa fa-user fa-lg"></i></span>
+                    <input id="Nickname" name="Nickname" type="text" value="Логин" onBlur="if(this.value == '') this.value = ' Логин'" onFocus="if(this.value == 'Логин') this.value = ''" required>
+                </p>
+                <p>
+                    <span class="fontawesome-lock"><i class="fa fa-lock fa-lg"></i></span>
+                    <input id="Password" name="Password" type="password" value="Пароль" onBlur="if(this.value == '') this.value = 'Пароль'" onFocus="if(this.value == 'Пароль') this.value = ''" required>
+                </p>
+                <input type="submit" value="ВОЙТИ" class="btn btn-default" />
+            </fieldset>
+        </form>
+        @if (Model.GetErrorList() != null)
+        {
+            foreach (var item in Model.GetErrorList())
+            {
+                <i style="color:red"> @item</i><br>
+            }
+        }
+        <div class="center">
+            <p>
+                <i class="fa fa-user-secret fa-lg" style="color:#606468"></i>
+                Нет аккаунта?
+                &nbsp;&nbsp; <i class="fa fa-hand-o-right fa-lg" style="color:#606468"> </i> <a href="/Login/Register">Регистрация</a>
+            </p>
         </div>
     </div>
-
-    @Html.ActionLink("Register", "Register", "Login")
-</div>
-}
-
 </body>
 </html>

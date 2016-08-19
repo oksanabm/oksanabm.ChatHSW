@@ -1,0 +1,180 @@
+﻿@charset "utf-8";
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+  padding-right:70px;
+}
+
+[class*="fontawesome-"] {
+-moz-transition: padding .25s;
+-webkit-transition: padding .25s;
+-o-transition: padding .25s;
+transition: padding .25s;
+
+}
+
+/* ---------- GENERAL ---------- */
+html{
+  height: 100%;
+}
+
+
+body {
+    background-image: url(../images/background.jpg);
+	background-color: white;
+	background-position: bottom right;
+    background-repeat: no-repeat;
+	height: 100%;
+	font-family: 'Open Sans', Arial, sans-serif;
+	line-height: 1.5em;
+}
+
+a {
+	color: #FF6100;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+input {
+    color: #eee;
+	border: none;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5em;
+	padding: 0;
+	-webkit-appearance: none;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 20px;
+    margin-right: 5px;
+    font-size: 13px;
+    text-align: right;
+}
+
+label:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color: #dddddd;
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+
+.radio label:before {border-radius: 8px;
+}
+
+.text-box {
+    text-align: right;
+} 
+
+
+p {
+	line-height: 0.5em;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+}
+
+h5 {
+     text-align: center;
+     font-weight: bold;
+     text-transform: uppercase;
+     color: #4B4541;
+}
+
+.center{ text-align: center;}
+
+.form-group {
+     *zoom: 1;
+     border: none;
+     } 
+
+.form-group:before, .form-group:after {
+	display: table;
+	content: "";
+    }
+.form-group:after { clear: both; }
+
+#LoginForm {
+	width: 500px;
+    margin: auto auto;
+    margin-top: 0px;
+    padding: 2%;
+    text-align: right;
+    }
+
+#LoginForm form input[type="radio"] {
+    display: none;
+}
+
+#LoginForm form span {
+	border-radius: 3px 0px 0px 3px;
+	-moz-border-radius: 3px 0px 0px 3px;
+	-webkit-border-radius: 3px 0px 0px 3px;
+	color: #606468;
+	display: block;
+	align-content: space-between;
+          }
+
+#LoginForm form input {height: 40px;}
+
+
+#LoginForm form input[type="radio"]:checked + label:before {
+    content: '\2022';
+    color: #FE973D;
+    font-size: 30px;
+    text-align: center;
+    line-height: 18px;
+    }
+
+#LoginForm form input[type="text"], input[type="password"], input[type="number"] {
+	background-color: #eee;
+	border-radius: 0px 3px 3px 0px;
+	-moz-border-radius: 0px 3px 3px 0px;
+	-webkit-border-radius: 0px 3px 3px 0px;
+	color: #4B4541;
+	margin-bottom: 1em;
+	padding: 0 16px;
+	width: 180px;
+    }
+
+#LoginForm form input:focus {
+	color:#000000;
+}
+
+#LoginForm form input[type="submit"] {
+    text-align: center;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background-color: #4B4541;
+	color: #eee;
+    height: 50px;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
+	cursor:pointer;
+	width: 260px;
+}
+
+#LoginForm form input[type="submit"]:hover {
+	background-color: #FE973D;
+}
+
+#LoginForm > p {
+	text-align: center;
+}
+
+#LoginForm > p span {
+	padding-left: 5px;
+}

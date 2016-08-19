@@ -12,42 +12,56 @@
     <title>HSW site</title>
 </head>
 <body>
-    @Html.ActionLink("Поиск собеседника", "AllUsers", new {userId = Model.GetUser().Id})
+    <div class="father_box" align="right">
+        <div class="box">
+            <div class="hat_box">
+                Список друзей
+            </div>
+            <div class="wrap">
+                <table class="table">
+                    <tr width="100%">
+                        <th width="30%">
+                            Ник пользователя
+                        </th>
+                        <th width="15%">
+                            Возраст
+                        </th>
+                        <th width="30%">
+                            Последний визит
+                        </th>
+                        <th width="25%"> Удалить | Перейти </th>
+                    </tr>
 
-<h4>Список друзей ^^</h4>
-<table class="table">
-    <tr>
-        <th>
-            Nickname
-        </th>
-        <th>
-            Возраст
-        </th>
-        <th>
-            Последний визит
-        </th>
-        <th></th>
-    </tr>
+                    @foreach (var item in Model.GetUserList())
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nickname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Age)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LastVisit)
+                            </td>
+                            <td>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="/User/DeleteFriend/@item.Id?userId=@Model.GetUser().Id" class="fa fa-user-secret fa-2x"></a>&nbsp;&nbsp;|
+                                &nbsp;
+                                <a href="/User/RedirectToCreateChat/@item.Id?userId=@Model.GetUser().Id" class="fa fa-weixin fa-2x"></a>
+                            </td>
+                        </tr>
+                    }
 
-    @foreach (var item in Model.GetUserList())
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nickname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Age)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastVisit)
-            </td>
-            <td>
-                @Html.ActionLink("Чат", "RedirectToCreateChat", new {id = item.Id, userId = Model.GetUser().Id}) |
-                @Html.ActionLink("Удалить из друзей", "DeleteFriend", new {id = item.Id, userId = Model.GetUser().Id})
-            </td>
-        </tr>
-    }
+                </table>
+            </div>
+            <div id="UserSearchBox" >
 
-</table>
+    <i style="color:#606468; font-size: 20px">Найти друзей&nbsp;</i>
+    <a href="/User/AllUsers?userId= @Model.GetUser().Id" class="fa fa-search fa-2x"></a>
+</div>
+        </div>
+
+    </div>
 </body>
 </html>

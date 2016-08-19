@@ -1,66 +1,75 @@
-﻿@model SignalRChat.Models.User
+﻿@model SignalRChat.Models.BasicCookie
 
 @{
     Layout = null;
 }
 <!DOCTYPE html>
+<html>
 
 <head>
     <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Content/style_registr.css" media="screen" type="text/css" />
     <title>HSW site</title>
 </head>
+<body>
+        <img src="../images/logo_1.png" alt="CHAT FROM the Hard Siberian Women" align="left">
+        <div id="LoginForm">
+        <form action="/Login/Register" method="post">
+            @Html.AntiForgeryToken()
+            <h5>Регистрация нового пользователя</h5>
+            @Html.ValidationSummary(true)
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
+            <fieldset class="form-group">
+                <p>
+                    <span class="fontawesome-user">
+                        Введите имя пользователя &nbsp;&nbsp;
+                        <input class="text-box" data-val="true" data-val-required="Требуется поле Никнейм." id="Nickname" name="Nickname" type="text">
+                </p>
+                <p>
+                    <span class="fontawesome-user">
+                        Укажите возраст &nbsp;&nbsp;
+                    <input class="text-box" data-val="true" data-val-number="Поле возраст должно быть численным" data-val-required="Требуется поле возраст." id="Age" name="Age" type="number" value="0" min="0">
+                    </span>
+                </p>
+                <p>
 
-    <div class="form-horizontal">
-        <h4>Register form</h4>
-        @Html.ValidationSummary(true)
-
-        <div class="form-group">
-            Please enter your nickname
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Nickname)
-                @Html.ValidationMessageFor(model => model.Nickname)
-            </div>
-        </div>
-
-        <div class="form-group">
-            Please enter your age
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Age)
-                @Html.ValidationMessageFor(model => model.Age)
-            </div>
-        </div>
-
-        <div class="form-group">
-            Please enter your sex
-            @Html.LabelFor(model => model.Sex, new {@class = "control-label col-md-2"})
-            <label class="radio-inline"><input type="radio" id="Sex" name="Sex" value="0">Male</label>
-            <label class="radio-inline"><input type="radio" id="Sex" name="Sex" value="1">Female</label>
-        </div>
-
-        <div class="form-group">
-            Please enter password
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Password)
-                @Html.ValidationMessageFor(model => model.Password)
-            </div>
-        </div>
-
-        <br>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default"/>
-            </div>
+                    <div class="radio" align="right">
+                        <span class="fontawesome-user">
+                            Укажите пол &nbsp;&nbsp;
+                            <input id="Men" type="radio" name="Sex" value="1">
+                            <label for="Men"> Мужчина <i class="fa fa-male fa-lg"></i></label>
+                            &nbsp;&nbsp;
+                            <input id="Women" type="radio" name="Sex" value="0">
+                            <label for="Women"> Женщина <i class="fa fa-female fa-lg"></i></label>
+                        </span>
+                    </div>
+                </p>
+                <p>
+                    <span class="fontawesome-user">
+                        Введите пароль &nbsp;&nbsp;
+                        <input class="text-box" data-val="true" data-val-required="Требуется поле пароль." id="Password" name="Password" type="text">
+                    </span>
+                </p>
+                @if (Model.GetErrorList() != null)
+                {
+                    foreach (var item in Model.GetErrorList())
+                    {
+                        <i style="color:red"> @item</i><br>
+                    }
+                }
+                <div class="center">
+                    <input type="submit" value="Зарегистрироваться" class="btn btn-default">
+                </div>
+            </fieldset>
+        </form>
+        <div class="center">
+            <p>
+                @Html.ActionLink("Вернуться на главную", "Index") <i class="fa fa-reply fa-lg" style="color:#FE973D"></i>
+            </p>
         </div>
     </div>
-    
-    <div>
-        @Html.ActionLink("Back to Login", "Index")
-    </div>
-}
+</body>
 
-
+</html>

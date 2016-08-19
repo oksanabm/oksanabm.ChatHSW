@@ -12,26 +12,38 @@
     <title>HSW site</title>
 </head>
 <body>
-    <table class="table">
-        <tr>
-            <th>
-                Имя чата
-            </th>
-            <th></th>
-        </tr>
-    
-    @foreach (var item in Model.GetChatList()) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.ActionLink("Тут будет красивая кнопка на открытие чата", "Message", new { chatId = item.Id, userId = Model.GetUser().Id }) |
-                @Html.ActionLink("Тут будет красивая кнопка на удаление чата", "Delete", new { chatId = item.Id, userId = Model.GetUser().Id })
-            </td>
-        </tr>
-    }
-    
-    </table>
+    <div class="father_box" align="right">
+        <div class="box">
+            <div class="hat_box">
+                Список чатов
+            </div>
+            <div class="wrap">
+                <table class="table">
+                    <tr>
+                        <th width="70%">
+                            Имя чата
+                        </th>
+                        <th> Открыть | Удалить </th>
+                    </tr>
+
+                    @foreach (var item in Model.GetChatList())
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="/Chat/Message/@item.Id?userId=@Model.GetUser().Id" class="fa fa-weixin fa-2x"></a>&nbsp;&nbsp;|
+                                &nbsp;
+                                <a href="/Chat/Delete/@item.Id?userId=@Model.GetUser().Id" class="fa fa-times fa-2x"></a>
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

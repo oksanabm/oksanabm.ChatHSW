@@ -17,25 +17,174 @@
 
         <script>
             $(function () {
-                // Reference the auto-generated proxy for the hub.
 
+                // showing and hiding cloud of smiles
+                $('#openSmilies').click(function() {
+                        $('.img-CallSmile2').css('display', 'block');
+                        $('.img-CallSmile').css('display', 'none');
+                        $('.smilesCloud').css('display', 'block'); 
+                 
+                 })
+                 $('#openSmilies2').click(function() {
+                        $('.img-CallSmile2').css('display', 'none');
+                        $('.img-CallSmile').css('display', 'block');
+                        $('.smilesCloud').css('display', 'none');  
+                })
+
+                $('#smile1').click(function() {
+                    $('#message').val('<img class="smile" src="images/smile/smile (1).svg" alt="">');
+                    chat.server.send($('#displayname').val(), $('#message').val());
+                    $('#message').val('');
+                }); 
+
+                $('#smile2').click(function() {
+                    $('#message').val('<img class="smile" src="images/smile/smile (2).svg" alt="">');
+                    chat.server.send($('#displayname').val(), $('#message').val());
+                    $('#message').val('');
+                }); 
+
+                $('#smile3').click(function() {
+                    $('#message').val('<img class="smile" src="images/smile/smile (3).svg" alt="">');
+                    chat.server.send($('#displayname').val(), $('#message').val());
+                    $('#message').val('');
+                }); 
+
+                $('#smile4').click(function() {
+                    $('#message').val('<img class="smile" src="images/smile/smile (4).svg" alt="">');
+                    chat.server.send($('#displayname').val(), $('#message').val());
+                    $('#message').val('');
+                }); 
+
+                $('#smile5').click(function() {
+                    $('#message').val('<img class="smile" src="images/smile/smile (5).svg" alt="">');
+                    chat.server.send($('#displayname').val(), $('#message').val());
+                    $('#message').val('');
+                }); 
+
+                $('#smile6').click(function() {
+                    $('#message').val('<img class="smile" src="images/smile/smile (6).svg" alt="">');
+                    chat.server.send($('#displayname').val(), $('#message').val());
+                    $('#message').val(''); 
+                }); 
+                
+                $('#smile7').click(function() {
+                    $('#message').val('<img class="smile" src="images/smile/smile (7).svg" alt="">');
+                    chat.server.send($('#displayname').val(), $('#message').val());
+                    $('#message').val('');
+                 }); 
+
+                 $('#smile8').click(function() {
+                    $('#message').val('<img class="smile" src="images/smile/smile (8).svg" alt="">');
+                    chat.server.send($('#displayname').val(), $('#message').val());
+                    $('#message').val('');
+                 }); 
+
+                 $('#smile9').click(function() {
+                    $('#message').val('<img class="smile" src="images/smile/smile (9).svg" alt="">');
+                    chat.server.send($('#displayname').val(), $('#message').val());
+                    $('#message').val('');
+                 }); 
+                
+                 $('#smile10').click(function() {
+                    $('#message').val('<img class="smile" src="images/smile/smile (10).svg" alt="">');
+                    chat.server.send($('#displayname').val(), $('#message').val());
+                    $('#message').val('');
+                 }); 
+                
+                 $('#smile11').click(function() {
+                    $('#message').val('<img class="smile" src="images/smile/smile (11).svg" alt="">');
+                    chat.server.send($('#displayname').val(), $('#message').val());
+                    $('#message').val('');
+                 }); 
+
+                 $('#smile12').click(function() {
+                     $('#message').val('<img class="smile" src="images/smile/smile (12).svg" alt="">');
+                     chat.server.send($('#displayname').val(), $('#message').val());
+                     $('#message').val('');
+                 }); 
+
+                 $('#smile13').click(function() {
+                     $('#message').val('<img class="smile" src="images/smile/smile (13).svg" alt="">');
+                     chat.server.send($('#displayname').val(), $('#message').val());
+                     $('#message').val('');
+                 }); 
+
+                 $('#smile14').click(function() {
+                     $('#message').val('<img class="smile" src="images/smile/smile (14).svg" alt="">');
+                     chat.server.send($('#displayname').val(), $('#message').val());
+                     $('#message').val('');
+                 }); 
+
+                 $('#smile15').click(function() {
+                     $('#message').val('<img class="smile" src="images/smile/smile (15).svg" alt="">');
+                     chat.server.send($('#displayname').val(), $('#message').val());
+                     $('#message').val('');
+                 }); 
+
+                 $('#smile16').click(function() {
+                     $('#message').val('<img class="smile" src="images/smile/smile (16).svg" alt="">');
+                     chat.server.send($('#displayname').val(), $('#message').val());
+                     $('#message').val('');
+                 }); 
+
+                 $('#smile17').click(function() {
+                     $('#message').val('<img class="smile" src="images/smile/smile (17).svg" alt="">');
+                     chat.server.send($('#displayname').val(), $('#message').val());
+                     $('#message').val(''); 
+                 }); 
+                
+                 $('#smile18').click(function() {
+                     $('#message').val('<img class="smile" src="images/smile/smile (18).svg" alt="">');
+                     chat.server.send($('#displayname').val(), $('#message').val());
+                     $('#message').val('');
+                 }); 
+
+                 $('#smile19').click(function() {
+                     $('#message').val('<img class="smile" src="images/smile/smile (19).svg" alt="">');
+                     chat.server.send($('#displayname').val(), $('#message').val());
+                     $('#message').val('');
+                 }); 
+
+                 $('#smile20').click(function() {
+                     $('#message').val('<img class="smile" src="images/smile/smile (20).svg" alt="">');
+                     chat.server.send($('#displayname').val(), $('#message').val());
+                     $('#message').val('');
+                 }); 
+                
+                 $('#smile21').click(function() {
+                     $('#message').val('<img class="smile" src="images/smile/smile (21).svg" alt="">');
+                     chat.server.send($('#displayname').val(), $('#message').val());
+                     $('#message').val('');
+                 }); 
+                
+
+                // Reference the auto-generated proxy for the hub.
                 var chat = $.connection.chatHub;
                 var initPage = 1;
 
                 chat.client.addNewMessageToPage = function (name, message) {
-                    $('#discussion').append('<li>' + htmlEncode(name)
-                        + ': ' + htmlEncode(message) + '</li>');
+                    if (message.indexOf('<img class="smile"') == -1)
+                        message = htmlEncode(message);
+
+                    if (name === $('#displayname').val())
+                        $('#discussion').append(
+                        '<table><tr><td width="50px"><div class="reporter-ico"> <img src="images/ava8.png" alt=""></div></td>' +
+                        '<td><div class="reporter">' + message + '</div></td></tr></table>');
+                    else
+                        $('#discussion').append(
+                        '<table width="100%"><tr><td align="right"><div class="interviewee">' + message + '</div></td>' +
+                        '<td align="right" width="50px"><div class="interviewee-ico"> <img src="images/ava7.png" alt=""></div></td></tr></table>'
+                        );
+                    $("#wrapper").scrollTop($("#wrapper")[0].scrollHeight);
                 };
 
-
                 $('#message').focus();
-                 $('#displayname').val("@Model.GetUser().Nickname");
+                $('#displayname').val("@Model.GetUser().Nickname");
 
                 $.connection.hub.start().done(function () {
                     chat.server.init(@Model.GetMessageList().FirstOrDefault().Chat.Id, initPage);
                     initPage = 0;
                     $('#sendmessage').click(function () {
-
                         chat.server.send($('#displayname').val(), $('#message').val());
                         $('#message').val('').focus();
                     });
@@ -50,16 +199,61 @@
     }
 </head>
 <body>
-<div align="center">
-    <div class="box">
-        <h2>@Model.GetMessageList().FirstOrDefault().Chat.Name</h2>
 
-            <ul id="discussion" class ="wrap"></ul>
-            <textarea cols="50" rows="5" wrap="virtual" id="message"></textarea>
-            <input type="button" id="sendmessage" value="Отправить" />
-            <input type="text" id="displayname" hidden="true"/>
+    <div class="father_box" align="right">
 
-    </div>
-</div>
+        <div class="box">
+            <div class="hat_box">
+                @Model.GetMessageList().FirstOrDefault().Chat.Name
+            </div>
+            <div class="wrap" id="wrapper">
+                <ul id="discussion"> </ul>
+            </div>
+            <div class="smilesCloud">
+                <table align="center" cellspacing="2" cellpadding="2">
+                    <tr>
+                        <td> <input class="smile" type="image" id="smile1" src="images/smile/smile (1).svg"> </td>
+                        <td> <input class="smile" type="image" id="smile2" src="images/smile/smile (2).svg"> </td>
+                        <td> <input class="smile" type="image" id="smile3" src="images/smile/smile (3).svg"> </td>
+                        <td> <input class="smile" type="image" id="smile4" src="images/smile/smile (4).svg"> </td>
+                        <td> <input class="smile" type="image" id="smile5" src="images/smile/smile (5).svg"> </td>
+                        <td> <input class="smile" type="image" id="smile6" src="images/smile/smile (6).svg"> </td>
+                        <td> <input class="smile" type="image" id="smile7" src="images/smile/smile (7).svg"> </td>
+                    </tr>
+                    <tr>
+                        <td> <input class="smile" type="image" id="smile8" src="images/smile/smile (8).svg"> </td>
+                        <td> <input class="smile" type="image" id="smile9" src="images/smile/smile (9).svg"> </td>
+                        <td> <input class="smile" type="image" id="smile10" src="images/smile/smile (10).svg"> </td>
+                        <td> <input class="smile" type="image" id="smile11" src="images/smile/smile (11).svg"> </td>
+                        <td> <input class="smile" type="image" id="smile12" src="images/smile/smile (12).svg"> </td>
+                        <td> <input class="smile" type="image" id="smile13" src="images/smile/smile (13).svg"> </td>
+                        <td> <input class="smile" type="image" id="smile14" src="images/smile/smile (14).svg"> </td>
+                    </tr>
+                    <tr>
+                        <td> <input class="smile" type="image" id="smile15" src="images/smile/smile (15).svg"> </td>
+                        <td> <input class="smile" type="image" id="smile16" src="images/smile/smile (16).svg"> </td>
+                        <td> <input class="smile" type="image" id="smile17" src="images/smile/smile (17).svg"> </td>
+                        <td> <input class="smile" type="image" id="smile18" src="images/smile/smile (18).svg"> </td>
+                        <td> <input class="smile" type="image" id="smile19" src="images/smile/smile (19).svg"> </td>
+                        <td> <input class="smile" type="image" id="smile20" src="images/smile/smile (20).svg"> </td>
+                        <td> <input class="smile" type="image" id="smile21" src="images/smile/smile (21).svg"> </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="box-mess">
+                   <table align="center" cellspacing="10" cellpadding="10">
+                    <tr>
+                        <td align="center"> <div class="reporter-ico"> <img src="images/ava8.png" alt=""></div></td>
+                        <td width="auto"> <textarea cols="50" rows="5" id="message"></textarea></td>
+                        <td><input class="img-CallSmile2" type="image" id="openSmilies2" src="images/smile/call_smile2.png">
+                         <input class="img-CallSmile" type="image" id="openSmilies" src="images/smile/call_smile.png"> </td>
+                        <td><input type="button" id="sendmessage" value="Отправить" class="btn btn-default"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+       </div>
+    <input type="text" id="displayname" hidden="true">
+
 </body>
 </html>

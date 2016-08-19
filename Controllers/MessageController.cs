@@ -13,6 +13,9 @@ namespace SignalRChat.Controllers
         // GET: /Message/
         public ActionResult Index(int? chatId, int? userId)
         {
+            if (userId != (int)HttpContext.Session["Id"])
+                return RedirectToAction("Index", "Login");
+
             if (chatId != null)
             {
                 var messagesInChat = db.Messages.Where(x => x.Chat.Id == chatId).ToList();

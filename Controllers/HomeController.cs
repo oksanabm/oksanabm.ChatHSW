@@ -7,9 +7,7 @@ namespace SignalRChat.Controllers
     {
         public ActionResult Index(User user)
         {
-            var basicCookie = new BasicCookie(user);
-
-            return View(basicCookie);
+            return RedirectToAction("Index", "Chat", new { userId = user.Id });
         }
         public ActionResult Chat()
         {

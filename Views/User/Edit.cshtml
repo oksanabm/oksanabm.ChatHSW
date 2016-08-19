@@ -8,66 +8,93 @@
 
 <html>
 <head>
+    <link rel="stylesheet" href="../Content/style_profile.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="../Content/Style.css" media="screen" type="text/css" />
     <meta name="viewport" content="width=device-width" />
     <title>HSW site</title>
+    <script>
+        $(document).ready(function () {
+            if ($("#UserSex").val() == 1)
+                $("#Men").prop("checked", true);
+            else $("#Women").prop("checked", true);
+        });
+        
+    </script>
 </head>
 <body>
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-        <div class="form-horizontal">
-            <hr />
-            @Html.ValidationSummary(true)
-            @Html.HiddenFor(model => model.GetUser().Id)
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.GetUser().Nickname, new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.GetUser().Nickname)
-                    @Html.ValidationMessageFor(model => model.GetUser().Nickname)
-                </div>
+    <div class="father_box" align="right">
+        <div class="box">
+            <div class="hat_box">
+                Настройки профиля
             </div>
+            <div id="ProfileForm">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+                        @Html.HiddenFor(model => model.GetUser().Id)
+                                              
+                                       <table cellpadding="4" cellspacing="4" class="userProfile">
+                                        <tr> 
+                                            <td> Имя пользователя </td>
+                                            <td><span>
+                                                @Html.EditorFor(model => model.GetUser().Nickname)
+                                                @Html.ValidationMessageFor(model => model.GetUser().Nickname)
+                                            </span></td>
+                                        </tr>
+                                        <tr>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.GetUser().Age, new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.GetUser().Age)
-                    @Html.ValidationMessageFor(model => model.GetUser().Age)
-                </div>
-            </div>
+                                            <td>Возраст:</td>
+                                            <td>
+                                                @Html.EditorFor(model => model.GetUser().Age)
+                                                @Html.ValidationMessageFor(model => model.GetUser().Age)
+                                            </td>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.GetUser().Sex, new {@class = "control-label col-md-2"})
-                <label class="radio-inline"><input type="radio" id="Sex" name="Sex" value="0">Male</label>
-                <label class="radio-inline"><input type="radio" id="Sex" name="Sex" value="1">Female</label>
-            </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.GetUser().Password, new {@class = "control-label col-md-2"})
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.GetUser().Password)
-                    @Html.ValidationMessageFor(model => model.GetUser().Password)
-                </div>
-            </div>
-
-            Друзья:
-            @Html.ActionLink(
-                @Model.GetUser().Friends.Count.ToString(), 
-                "Index", new { userId = Model.GetUser().Id })
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.GetUser().LastVisit, new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Model.GetUser().LastVisit
-                </div>
-            </div>
-    
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Save" class="btn btn-default" />
+                                        </tr>
+                                        <tr>
+                                            <td>Пол:</td>
+                                            <td>
+                                                <div class="radio" align="right">
+                                                    <input id ="Men" type="radio" name="Sex" value="1">
+                                                    <label for="Men">Мужчина</label>
+                                                    &nbsp;
+                                                    <input id ="Women" type="radio" name="Sex" value="0">
+                                                    <label for="Women">Женщина</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Пароль:</td>
+                                            <td>
+                                                @Html.EditorFor(model => model.GetUser().Password)
+                                                @Html.ValidationMessageFor(model => model.GetUser().Password)
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Друзья:</td>
+                                            <td>
+                                                @Html.ActionLink(@Model.GetUser().Friends.Count.ToString(), "Index", new { userId = Model.GetUser().Id })
+                                                &nbsp; <i style="color:#606468" class="fa fa-users"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Последний визит:</td>
+                                            <td>
+                                                @Model.GetUser().LastVisit    &nbsp;
+                                                <i style="color:#606468" class="fa fa-info"></i>
+                                            </td>
+                                        </tr>
+                                    </table>
+ 
+                                <div class="center">
+                                    <p> <input type="submit" value="Сохранить изменения" class="btn btn-default" /> </p>
+                                </div>
+                    }
                 </div>
             </div>
         </div>
-    }
+    <input type="text" id="UserSex" value="@Model.GetUser().Sex" hidden="true">
 </body>
 </html>
+

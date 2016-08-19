@@ -1,0 +1,150 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+@import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
+
+ ---------- FONTAWESOME ---------- */
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+  padding-right:70px;
+}
+
+[class*="fontawesome-"] {
+-moz-transition: padding .25s;
+-webkit-transition: padding .25s;
+-o-transition: padding .25s;
+transition: padding .25s;
+
+}
+/*
+[class="field-validation-valid"]{
+    
+
+}*/
+
+[class*="field-validation-valid"]:before {
+  border: none;
+  }
+
+/* ---------- GENERAL ---------- */
+html{
+  height: 100%;
+}
+
+body {
+    background-image: url(../images/background.jpg);
+	background-color: white;
+	background-position: bottom right;
+    background-repeat: no-repeat;
+	height: 100%;
+	font-family: 'Open Sans', Arial, sans-serif;
+	line-height: 1.5em;
+}
+
+
+a {
+	color: #FF6100;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+input {
+    color: #eee;
+	border: none;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5em;
+	padding: 0;
+	-webkit-appearance: none;
+}
+
+p {
+	line-height: 0.5em;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+}
+
+
+.center{ text-align: center;}
+
+.form-group {
+     *zoom: 1;
+     border: none;
+
+} /* For IE 6/7 */
+.form-group:before, .form-group:after {
+	display: table;
+	content: "";
+    }
+.form-group:after { clear: both; }
+
+#LoginForm {
+	margin: 80px auto;
+	width: 305px;
+    }
+
+
+#LoginForm form span {
+	background-color: #FDFAF1;
+	border-radius: 3px 0px 0px 3px;
+	-moz-border-radius: 3px 0px 0px 3px;
+	-webkit-border-radius: 3px 0px 0px 3px;
+	color: #606468;
+	display: block;
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	width: 50px;
+      }
+
+#LoginForm form input {
+	height: 50px;
+}
+
+#LoginForm form input[type="text"], input[type="password"] {
+	background-color: #eee;
+	border-radius: 0px 3px 3px 0px;
+	-moz-border-radius: 0px 3px 3px 0px;
+	-webkit-border-radius: 0px 3px 3px 0px;
+	color: #4B4541;
+	margin-bottom: 1em;
+	padding: 0 16px;
+	width: 198px;
+}
+
+#LoginForm form input:focus {
+	color:#000000;
+}
+
+#LoginForm form input[type="submit"] {
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background-color: #4B4541;
+	color: #eee;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
+	cursor:pointer;
+	width: 280px;
+}
+
+#LoginForm form input[type="submit"]:hover {
+	background-color: #FE973D;
+}
+
+#LoginForm > p {
+	text-align: center;
+}
+
+#LoginForm > p span {
+	padding-left: 5px;
+}
+

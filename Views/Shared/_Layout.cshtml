@@ -11,29 +11,39 @@
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/js")
     @RenderSection("scripts", required: false)
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../../Content/style2.css" />
     <link rel="stylesheet" href="../../Content/styles.css">
+
 </head>
 <body>
-    <p align="right">Hello, <a href='@string.Format("/User/Edit?userId={0}", @Model.GetUser().Id)'>@Model.GetUser().Nickname</a></p>
+    <table width="100%" cellpadding="6" style="position: absolute;">
+        <tr>
+         <td width="120px" height="75px" align="center"><img src="../images/logo/logo1.png" alt="CHAT FROM the Hard Siberian Women"></td>
+            <td>
+                <div id="rightBlocInfo" align="right">
+                     Привет, <a href='@string.Format("/User/Edit?userId={0}", @Model.GetUser().Id)' style="color: #ff8a36; font-size: 18px;">@Model.GetUser().Nickname</a> <br>
+                     Выйти &nbsp;<a href='@string.Format("/Login/Logout", @Model.GetUser().Id)' class="fa fa-sign-in fa-2x"></a>
+                </div>
+            </td>
+        </tr>
+        </table>
+            <div class="container"> <nav id="bt-menu" class="bt-menu">
+                    <a href="#" class="bt-menu-trigger">
+                    <span>Menu</span></a>
+                    <ul>
+                        <li><a href='@string.Format("/User/Index?userId={0}", @Model.GetUser().Id)' class="icon icon-organization"></a><font color="white">Выбор собеседника</font></li>
+                        <li><a href='@string.Format("/Chat/Index?userId={0}", @Model.GetUser().Id)' class="icon icon-chat-bubble-two"></a>><font color="white">Выбор чата</font></li>
+                        <li><a href='@string.Format("/User/Edit?userId={0}", @Model.GetUser().Id)' class="icon icon-settings"></a><font color="white">Настройки</font></li>
+                    </ul>
+                </nav>
+                @RenderBody()
+            </div>
 
-<div class="container">
+            <script src="/Scripts/classie.js"></script>
+            <script src="/Scripts/borderMenu.js"></script>
+            <div class="container body-content">
 
-    <nav id="bt-menu" class="bt-menu">
-        <a href="#" class="bt-menu-trigger"><span>Menu</span></a>
-        <ul>
-            <li><a href='@string.Format("/User/Index?userId={0}", @Model.GetUser().Id)' class="icon icon-organization"></a><br><font color="white">Выбор собеседника</font></li>
-            <li><a href='@string.Format("/Chat/Index?userId={0}", @Model.GetUser().Id)' class="icon icon-chat-bubble-two"></a><br><font color="white">Выбор чата</font></li>
-            <li><a href='@string.Format("/User/Edit?userId={0}", @Model.GetUser().Id)' class="icon icon-settings"></a><br><font color="white">Настройки</font></li>
-        </ul>
-    </nav>
-    @RenderBody()
-</div>
-
-<script src="/Scripts/classie.js"></script>
-<script src="/Scripts/borderMenu.js"></script>
-<div class="container body-content">
-
-</div>
+            </div>
 </body>
 </html>

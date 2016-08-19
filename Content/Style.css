@@ -6,19 +6,179 @@ html,body {
     overflow-y: hidden
 }
 
+.father_box {
+    height: 100%;
+    padding-top: 4%;
+    padding-right:  17%;
+    margin-top: 0;
+    background-color: white;
+}
 .box {
-    border-style: solid;
-    height: 500px;
-    width: 70%;
-    box-shadow: 10px 10px;
+    width: 75%;
+    height: 375px;
+    box-shadow: 0 0 25px 10px rgba(205, 201, 201, 0.3);
     overflow: hidden;
+    text-align: left;
+}
+.hat_box {    
+    background: -webkit-radial-gradient(center center, circle closest-side, #ff8a36, #ff7a1b 800%);
+    height: 10%;
+    font-size: 20px;
+    color: white;
+    text-align: left;
+    text-indent: 4%;
+    padding-top: 1%;
+    vertical-align: auto;
+}
+
+#box-mess{
+    width: 100%;
+}
+
+#box-mess input[type="button"] {
+	border-radius: 10px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background-color: white;
+	color: #ccc9c9;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor:pointer;
+	width: 100%;
+    min-width: 130px;
+    max-width: 150px;
+}
+
+#box-mess input[type="button"]:hover {
+	background-color: #ff8a36;
+    color: white;
+}
+#message {
+   width: 100%; 
+   max-height: 50px;
+   resize: none;
+   }
+
+.smile {
+    width: 20px;
+    height: 20px;
+    margin: 2px auto;
+}
+
+#rightBlocInfo {
+    margin-right: 20px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 15px;
+}
+#rightBlocInfo a{
+    color: #606468;
+    font-size: 22px;
+}
+#rightBlocInfo a:hover{
+    color: #ff8a36;
+    font-size: 23px;
 }
 
 .wrap {
-    height: 60%;
-    width: 90%;
-    overflow-x: auto;
+    position: relative;
+    float: right; 
+    overflow: auto;
+    height: 65%;
+    width: 95%;
+    margin: 2% 2% 1% 2%;
+    padding: 2px;
+    overflow-x: hidden;
 }
+
+.smilesCloud {
+    display: none;
+    width: 175px;
+    position: absolute;
+    background: white;
+    margin: 175px 37%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-user-select: none; 
+    z-index: 2;
+    border: solid 1px #ccc9c9;
+   }
+
+.img-CallSmile {
+    position: relative;
+    float: left; 
+    width: 35px;
+    height: 35px;
+    outline: none;
+    -moz-appearance: button;
+}
+
+.img-CallSmile2 {
+    z-index: 2;
+    position: relative;
+    float: left;
+    display: none;
+    width: 35px;
+    height: 35px;
+    outline: none;
+    -moz-appearance: button;
+}
+
+/*Окно переписки пользователей */
+/*.reporter - блок для репортера */
+.reporter {
+  display: inline-block;
+  background-color: white;
+  border-radius: 5px; /*  закругленные углы*/
+  border: 1px solid #ebebeb;
+  padding: 7px;
+  margin: 5px;
+  text-align: justify; /*свойство для равномерного расположения текста слева и справа.*/
+}
+/*.interviewee - блок для интервьюируемого 
+курсивный шрифт, другое фоновое изображение и нет свойства всплывания вправо */
+.interviewee { 
+ display: inline-block;
+ background-color: white;
+ border-radius: 5px;
+ border: 1px solid #fac18f;
+ padding: 7px;
+ margin: 5px;
+ text-align: justify;
+
+}
+/*.reporter-ico - блок для аватары репортера */
+.reporter-ico {
+  width: 50px; 
+  }
+
+.interviewee-ico {
+  width: 50px; 
+  }
+
+#UserSearchBox{
+    height: 85%;
+    width: 100%;
+    padding-right: 3%;
+    text-align: right;
+    }
+
+textarea {
+    outline: none;
+}
+
+textarea:hover {
+    background-color: #fff9df;
+}
+
 ul {
     list-style-type: none;
+    padding: 0;
 }
+a {
+    color: #4B4541;
+}
+
+a:hover
+{
+    color: #FE973D;
+} 

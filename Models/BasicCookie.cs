@@ -8,6 +8,7 @@ namespace SignalRChat.Models
         private List<User> UserList;
         private List<Chat> ChatList;
         private List<Message> MessageList;
+        private List<string> ErrorList;
 
         public BasicCookie(User user)
         {
@@ -15,6 +16,7 @@ namespace SignalRChat.Models
             UserList = null;
             ChatList = null;
             MessageList = null;
+            ErrorList = null;
         }
 
         public User GetUser()
@@ -50,6 +52,16 @@ namespace SignalRChat.Models
         public void SetMessageList(List<Message> messageList)
         {
             MessageList = messageList;
+        }
+
+        // Error list
+        public List<string> GetErrorList()
+        {
+            return ErrorList;
+        }
+        public void SetErrorList(List<string> errorList)
+        {
+            ErrorList = errorList;
         }
 
     }

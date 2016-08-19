@@ -15,6 +15,9 @@ namespace SignalRChat.Controllers
 
         public ActionResult Index(int? userId)
         {
+            if (userId != (int)HttpContext.Session["Id"])
+                return RedirectToAction("Index", "Login");
+
             var currentUserFriends = db.Users.Where(x => x.Id == userId)
                                      .Select(t => t.Friends).First().Distinct().ToList();
             var cookie = new BasicCookie(db.Users.FirstOrDefault(x => x.Id == userId));
@@ -24,6 +27,9 @@ namespace SignalRChat.Controllers
 
         public ActionResult AllUsers(int? userId)
         {
+            if (userId != (int)HttpContext.Session["Id"])
+                return RedirectToAction("Index", "Login");
+
             var currentUserFriends = db.Users.FirstOrDefault(x => x.Id == userId).Friends;
             var cookie = new BasicCookie(db.Users.FirstOrDefault(x => x.Id == userId));
             cookie.SetUserList(db.Users.Distinct().ToList().Where(x => !currentUserFriends.Contains(x) && x.Id != userId).ToList());
@@ -32,6 +38,9 @@ namespace SignalRChat.Controllers
 
         public ActionResult AddToFriends(int? id, int? userId)
         {
+            if (userId != (int)HttpContext.Session["Id"])
+                return RedirectToAction("Index", "Login");
+
             var currentUser = db.Users.FirstOrDefault(x => x.Id == userId);
             var newFriend = db.Users.FirstOrDefault(x => x.Id == id);
             if (ModelState.IsValid)
@@ -47,6 +56,9 @@ namespace SignalRChat.Controllers
 
         public ActionResult DeleteFriend(int? id, int? userId)
         {
+            if (userId != (int)HttpContext.Session["Id"])
+                return RedirectToAction("Index", "Login");
+
             var currentUser = db.Users.FirstOrDefault(x => x.Id == userId);
             var deletingFriend = db.Users.FirstOrDefault(x => x.Id == id);
             if (ModelState.IsValid)
@@ -86,6 +98,9 @@ namespace SignalRChat.Controllers
 
         public ActionResult RedirectToCreateChat(int? id, int? userId)
         {
+            if (userId != (int)HttpContext.Session["Id"])
+                return RedirectToAction("Index", "Login");
+
             return RedirectToAction("CreateFromUserList", "Chat", new { id, userId });
         }
 
@@ -93,9 +108,11 @@ namespace SignalRChat.Controllers
         public ActionResult Edit(int? userId)
         {
             if (userId == null)
-            {
                 return HttpNotFound();
-            }
+
+            if (userId != (int)HttpContext.Session["Id"])
+                return RedirectToAction("Index", "Login");
+
             User user = db.Users.Find(userId);
             if (user == null)
             {
@@ -110,8 +127,9 @@ namespace SignalRChat.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include="Id,Nickname,Age, Password, Sex")] User user)
         {
-            if (ModelState.IsValid)
-            {
+            if (user.Id != (int)HttpContext.Session["Id"])
+                return RedirectToAction("Index", "Login");
+
                 var existingUser = db.Users.Find(user.Id);
                 if (existingUser.Nickname != user.Nickname) existingUser.Nickname = user.Nickname;
                 if (existingUser.Age != user.Age) existingUser.Age = user.Age;
@@ -120,8 +138,7 @@ namespace SignalRChat.Controllers
                 db.Users.AddOrUpdate(existingUser);
                 db.Entry(existingUser).State = EntityState.Modified;
                 db.SaveChanges();
-            }
-            var cookie = new BasicCookie(user);
+            var cookie = new BasicCookie(existingUser);
             return View(cookie);
         }
 
@@ -132,6 +149,9 @@ namespace SignalRChat.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            if (id != (int)HttpContext.Session["Id"])
+                return RedirectToAction("Index", "Login");
+
             User user = db.Users.Find(id);
             if (user == null)
             {
